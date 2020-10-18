@@ -1,3 +1,7 @@
+/**
+ * simple test with console.log
+ */
+
 const { Block } = require("../src/block")
 const { Blockchain } = require("../src/blockchain");
 
