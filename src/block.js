@@ -13,15 +13,13 @@ const SHA256 = require('crypto-js/sha256');
 const hex2ascii = require('hex2ascii');
 
 class Block {
-    hash = null;
-    height = 0;
-    body = ''; // string
-    time = 0;
-    previousBlockHash = ''; //string
-
     // Constructor - argument data will be the object containing the transaction data
 	constructor(data){
-        this.body = Buffer.from(JSON.stringify(data)).toString('hex');   // Will contain the transactions stored in the block, by default it will encode the data
+        this.hash = null;
+        this.height = 0;
+        this.time = 0;
+        this.previousBlockHash = ''; //string
+        this.body = Buffer.from(JSON.stringify(data)).toString('hex');
     }
     
     /**
